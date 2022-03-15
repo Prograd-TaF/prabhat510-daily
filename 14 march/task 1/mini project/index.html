@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header"></div>
+      <div class="middle">
+        <img src="./assets/cake.png" alt="cake image" />
+        <h4
+          style="
+            position: absolute;
+            left: 660px;
+            top: 95px;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+          "
+        >
+          Cake World
+        </h4>
+        <div id="price" class="child">
+          <h3>PRICES</h3>
+          <ul>
+            <li>chocolate ----- 300</li>
+            <li>strawberry ----- 100</li>
+            <li>butterscotch ----- 200</li>
+            <li>vanilla ----- 250</li>
+            <li onclick="addItem('Readvelvet')">Redvelvet ----- 100</li>
+          </ul>
+        </div>
+        <div class="child" id="cake">
+          <ul id="layers">
+            <li id="layer5"></li>
+            <li id="layer4"></li>
+            <li id="layer3"></li>
+            <li id="layer2"></li>
+            <li id="layer1"></li>
+          </ul>
+        </div>
+        <div id="bill" class="child">
+          <h3>BILL</h3>
+          <ul id="items"></ul>
+        </div>
+      </div>
+      <div class="footer">
+        <ul>
+          <li class="flavour" onclick="addItem('chocolate')">chocolate</li>
+          <li class="flavour" onclick="addItem('strawberry')">strawberry</li>
+          <li class="flavour" onclick="addItem('butterscotch')">
+            butterscotch
+          </li>
+          <li class="flavour" onclick="addItem('vanilla')">vanilla</li>
+          <li class="flavour" onclick="addItem('Readvelvet')">Redvelvet</li>
+        </ul>
+        <button class="btn" type="submit" onclick="buyItems()">BUY</button>
+      </div>
+    </div>
+  </body>
+  <script src="/script.js"></script>
+</html>

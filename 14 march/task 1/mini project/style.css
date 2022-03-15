@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+html {
+  background-color: rgb(82, 0, 0);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  background-color: rgb(82, 0, 0);
+  width: auto;
+  height: 100px;
+}
+.middle {
+  display: flex;
+  background-color: rgb(218, 76, 100);
+  width: auto;
+  height: 600px;
+  position: relative;
+}
+.footer {
+  background-color: rgb(82, 0, 0);
+  width: auto;
+  height: 125px;
+  display: flex;
+}
+h3 {
+  color: aliceblue;
+  font-style: italic;
+}
+li {
+  list-style: none;
+  line-height: 30px;
+  font-family: cursive;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+#layers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.child {
+  margin: auto;
+  border: 5px solid violet;
+  padding: 30px;
+  text-align: center;
+  width: 250px;
+  height: 270px;
+  border-radius: 5px;
+}
+.flavour {
+  display: inline;
+  border: 1px solid grey;
+  border-radius: 5px;
+  background-color: rgb(230, 55, 84);
+  padding: 5px;
+  margin: 50px;
+}
+.footer > ul {
+  margin: auto;
+}
+.btn {
+  border: 3px solid gray;
+  height: 40px;
+  width: 50px;
+  margin: auto;
+  border-radius: 5px;
+  background-color: greenyellow;
+  font-size: medium;
+  font-family: cursive;
+  color: rgb(95, 20, 20);
+}
+img {
+  position: absolute;
+  top: -80px;
+  left: 600px;
+  height: 200px;
+  width: 200px;
+  border: 3px solid gray;
+  border-radius: 100px;
+  background-color: black;
+}
+.total {
+  margin-top: 20px;
+}
+#layer1 {
+  width: 245px;
+  background-color: yellowgreen;
+  border-radius: 5px;
+}
+
+#layer2 {
+  width: 200px;
+  left: 40px;
+  background-color: blue;
+  border-radius: 5px;
+}
+
+#layer3 {
+  width: 160px;
+  left: 60px;
+  background-color: blueviolet;
+  border-radius: 5px;
+}
+
+#layer4 {
+  width: 120px;
+  left: 80px;
+  background-color: chocolate;
+  border-radius: 5px;
+}
+
+#layer5 {
+  width: 80px;
+  left: 100px;
+  background-color: darkgoldenrod;
+  border-radius: 5px;
+}
+.total {
+  margin-top: 20px;
+}
+#cake {
+  border: unset;
+  margin-top: 200px;
+}
