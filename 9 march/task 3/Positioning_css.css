@@ -1,0 +1,40 @@
+.box-1 {
+  width: 800px;
+  background-color: aquamarine;
+  font-size: 50px;
+  font-family: cursive;
+  padding: 5px;
+  border: 5px solid black;
+  margin: 100px 10px 10px 10px;
+  box-sizing: border-box;
+}
+#d1 {
+  position: fixed;
+  height: 1cm;
+  top: 30px;
+  background-color: bisque;
+}
+#d2 {
+  position: relative;
+  height: 2cm;
+  bottom: 150px;
+  left: 850px;
+  width: 200px;
+  background-color: gray;
+}
+#d3 {
+  position: sticky;
+  height: 1cm;
+  bottom: 850px;
+  left: 100px;
+  width: 200px;
+  background-color: darkseagreen;
+}
+#d4 {
+  position: relative;
+  height: 1cm;
+  bottom: 152px;
+  left: 851px;
+  width: 200px;
+  background-color: yellow;
+}
