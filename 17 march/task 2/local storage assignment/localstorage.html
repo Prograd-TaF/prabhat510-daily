@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    h3 {
+      text-align: center;
+    }
+    .container {
+      margin: auto;
+      width: 600px;
+    }
+    input {
+      margin: 10px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h3>Local Storage</h3>
+      <label for="">username:</label>
+      <input id="username" type="text" placeholder="username" /><br />
+      <label for="">password:</label>
+      <input id="password" type="text" placeholder="password" />
+      <div class="buttons">
+        <button onclick="set()">set</button><br />
+        <input id="get" type="text" />
+        <button onclick="get()">get</button>
+        <br />
+        <input type="text" id="remove" />
+        <button onclick="removeItems()">remove</button> <br /><button
+          onclick="clearItems()"
+        >
+          clear
+        </button>
+      </div>
+    </div>
+
+    <script>
+      function set() {
+        localStorage.setItem(
+          document.getElementById("username").value,
+          document.getElementById("password").value
+        );
+      }
+      function clearItems() {
+        localStorage.clear();
+      }
+      function removeItems() {
+        localStorage.removeItem(document.getElementById("remove").value);
+      }
+      function get() {
+        alert(localStorage.getItem(document.getElementById("get").value));
+      }
+    </script>
+  </body>
+</html>
