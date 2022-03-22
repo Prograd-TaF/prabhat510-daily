@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    h3 {
+      text-align: center;
+    }
+    .btn {
+      background-color: black;
+      border: 2px solid gray;
+      border-radius: 4px;
+      color: white;
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-left: 100px;
+      height: 40px;
+    }
+    .btn:hover {
+      cursor: pointer;
+    }
+    .container {
+      margin: auto;
+      width: 300px;
+    }
+    .square {
+      width: 300px;
+      height: 300px;
+      border: 5px solid gray;
+      background-color: green;
+    }
+    .circle {
+      width: 300px;
+      height: 300px;
+      border: 5px solid gray;
+      background-color: green;
+      border-radius: 150px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h3>Event Listener Assignment</h3>
+      <div class="square" id="target"></div>
+      <button class="btn" onclick="change()">change shape</button>
+    </div>
+
+    <script>
+      function change() {
+        let className = document.getElementById("target");
+        if (className.className === "circle") {
+          className.className = "square";
+        } else {
+          className.className = "circle";
+        }
+      }
+    </script>
+  </body>
+</html>
