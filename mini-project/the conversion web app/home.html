@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>the conversion app</title>
+  </head>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .header {
+      background-color: black;
+      height: 50px;
+      color: whitesmoke;
+      padding-top: 15px;
+      font-family: sans-serif;
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+    }
+    li {
+      list-style: none;
+      margin-top: -1px;
+      text-align: center;
+      padding: 10px;
+      cursor: pointer;
+      border: 1px solid gray;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+    li:hover {
+      background-color: lightgray;
+    }
+    .container {
+      margin: auto;
+      width: 250px;
+      margin-top: 100px;
+    }
+    p {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  </style>
+  <body>
+    <div class="header">Welcome to RapidConversion</div>
+    <div class="container">
+      <p>Online Conversion Tools</p>
+      <div class="convertors">
+        <ul>
+          <li id="feat-cur">Currency</li>
+          <li id="feat-num">Numbers</li>
+          <li id="feat-spe">Speed</li>
+          <li id="feat-tem">Temprature</li>
+        </ul>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

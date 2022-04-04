@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="./style.css" />
+
+  <body>
+    <div class="container">
+      <p>Speed</p>
+      <div class="part1">
+        <label for="unit">Choose a unit to convert from:</label>
+        <br /><br />
+        <select name="from-speed" id="from-speed">
+          <option value="">Select One …</option>
+          <option value="mps">mps</option>
+          <option value="mph">mph</option>
+          <option value="kmph">kmph</option>
+        </select>
+      </div>
+      <br />
+      <div class="part2">
+        <label for="unit">Choose the unit of output:</label>
+        <br /><br />
+        <select name="to-speed" id="to-speed">
+          <option value="">Select One …</option>
+          <option value="mps">mps</option>
+          <option value="mph">mph</option>
+          <option value="kmph">kmph</option>
+        </select>
+      </div>
+      <br />
+      <input type="number" id="speed" />
+      <button type="button" onclick="convertSpeed()" id="button">
+        convert
+      </button>
+      <p class="res" id="speed-res"></p>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
