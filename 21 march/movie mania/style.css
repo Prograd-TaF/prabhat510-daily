@@ -1,0 +1,59 @@
+html {
+  background-color: #9494b8;
+}
+body {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.nav-item {
+  margin: 10px;
+  margin-top: 15px;
+}
+ul,
+li {
+  display: inline-block;
+  cursor: pointer;
+}
+ul {
+  float: right;
+}
+nav {
+  background-color: whitesmoke;
+  height: 50px;
+}
+.ddown {
+  width: 120px;
+  height: 30px;
+  background-color: #e6e6e6;
+}
+#movies {
+}
+.movie {
+  height: 320px;
+  width: 250px;
+  background-color: whitesmoke;
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 10px;
+}
+.movie-thumbnail {
+  width: 250px;
+  height: 250px;
+}
+.container {
+  margin: auto;
+  width: 1200px;
+}
+.likes {
+  width: 20px;
+  height: 20px;
+}
+
+.views {
+  width: 25px;
+  height: 25px;
+}

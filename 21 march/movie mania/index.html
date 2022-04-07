@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>movie mania</title>
+  </head>
+  <link rel="stylesheet" href="./style.css" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <body>
+    <nav>
+      <li class="nav-item">ProGrad</li>
+      <ul>
+        <li>
+          <select
+            class="ddown"
+            name=""
+            id="dd"
+            onchange="getMoviesByLanguage()"
+          >
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+            <option value="te">Telugu</option>
+            <option value="ta">Tamil</option>
+          </select>
+        </li>
+        <li class="nav-item" onclick="getTrendingMovies()">Home</li>
+        <li class="nav-item" onclick="getPopularMovies()">Popular</li>
+        <li class="nav-item" onclick="getUpcomingMovies()">Upcoming</li>
+      </ul>
+    </nav>
+    <div class="container">
+      <div id="home"></div>
+      <div id="popular"></div>
+      <div id="upcoming"></div>
+      <div id="language"></div>
+      <div id="display-trailor"></div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
