@@ -3,6 +3,8 @@ html {
 }
 body {
   box-sizing: border-box;
+  font-family: "Nanum Gothic", sans-serif;
+  font-family: "Roboto Slab", serif;
 }
 * {
   margin: 0;

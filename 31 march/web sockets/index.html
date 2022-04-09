@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=h, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>WebSockets in Javascript</h1>
+    <div class="container">
+      <label for="name">Name:</label>
+      <span id="name"></span>
+      <br />
+      <label for="age">Age:</label>
+      <span id="age"></span>
+      <br />
+      <label for="designation">Designation:</label>
+      <span id="designation"></span>
+      <br />
+    </div>
+  </body>
+  <script>
+    const ws = new WebSocket("ws://localhost:8082");
+    ws.addEventListener("open", () => {
+      console.log("we are connected!");
+      ws.send("hey there, its prabhat bhargav");
+    });
+    ws.addEventListener("message", (e) => {
+      const obj = JSON.parse(e.data);
+      document.getElementById("name").innerHTML = obj.name;
+      document.getElementById("age").innerHTML = obj.age;
+      document.getElementById("designation").innerHTML = obj.designation;
+      console.log(e.data);
+    });
+  </script>
+</html>
