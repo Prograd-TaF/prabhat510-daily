@@ -1,0 +1,25 @@
+{
+  "name": "lab-node-express-getting-started",
+  "version": "1.0.0",
+  "description": "![Image description](https://i1.faceprep.in/ProGrad/prograd-logo.png) # PROGRAD LABS | EXPRESS | GETTING STARTED",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "script": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prograd-org/lab-node-express-getting-started.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prograd-org/lab-node-express-getting-started/issues"
+  },
+  "homepage": "https://github.com/prograd-org/lab-node-express-getting-started#readme",
+  "devDependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
