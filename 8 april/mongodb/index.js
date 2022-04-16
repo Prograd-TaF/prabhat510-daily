@@ -1,71 +1,85 @@
+// connect using mongoClient
+// specify the database
+// specify the collection
+// perform the crud operation
+
 const express = require("express");
-const mongoDB = require("mongodb");
+const mongodb = require("mongodb");
 const app = express();
-const mongoClient = mongoDB.MongoClient;
+const mongoClient = mongodb.MongoClient;
+
 app.use(express.json());
-let dburl =
-  "mongodb+srv://new_user:prabhat123@cluster0.ymoj2.mongodb.net/new?retryWrites=true&w=majority";
-app.get("/user/all", async (req, res) => {
+
+const dburl =
+  "mongodb+srv://prabhat510:Prabhat123@cluster0.h16ts.mongodb.net/sample_db?retryWrites=true&w=majority";
+
+app.get("/", async (req, res) => {
   const client = await mongoClient.connect(dburl);
   try {
-    let db = await client.db("MyDB1");
-    let data = await db.collection("dataset1").find().toArray();
-    res.json({
-      message: "GET Sucessful!",
-      data,
-    });
-  } catch (err) {
-    console.log(err);
+    const db = await client.db("sample_db");
+    const users = await db.collection("users").find().toArray();
+    res.json({ message: "display data", users });
+  } catch (error) {
+    console.log(error);
   } finally {
     client.close();
   }
 });
-app.get("/user/:id", async (req, res) => {
+app.get("/user/:userId", async (req, res) => {
+  const { userId } = req.params;
   const client = await mongoClient.connect(dburl);
   try {
-    let db = await client.db("MyDB1");
-    let data = await db.collection("dataset1").find().toArray();
-    res.json({
-      message: "GET FETCH Sucessful!",
-      data,
-    });
-  } catch (err) {
-    console.log(err);
+    const db = await client.db("sample_db");
+    const user = await db
+      .collection("users")
+      .findOne({ _id: new mongodb.ObjectId(userId) });
+    res.json(user);
+  } catch (error) {
+    console.log(error);
   } finally {
     client.close();
   }
 });
-app.post("/user/new", async (req, res) => {
+app.post("/add-user", async (req, res) => {
   const client = await mongoClient.connect(dburl);
   try {
-    let db = await client.db("MyDB1");
-    let data = await db.collection("dataset1").insertOne(req.body);
-    res.json({
-      message: "POST Sucessful!",
-      data,
-    });
-  } catch (err) {
-    console.log(err);
+    const db = await client.db("sample_db");
+    const user = await db.collection("users").insertOne(req.body);
+    res.json({ message: "user created", user });
+  } catch (error) {
+    console.log(error);
   } finally {
     client.close();
   }
 });
-app.put("/user/upd", async (req, res) => {
+app.put("/user/:userId/edit", async (req, res) => {
+  const { userId } = req.params;
   const client = await mongoClient.connect(dburl);
   try {
-    let db = await client.db("MyDB1");
-    let data = await db.collection("dataset1").insertOne(req.body);
-    res.json({
-      message: "PUT Sucessful!",
-      data,
-    });
-  } catch (err) {
-    console.log(err);
+    const db = await client.db("sample_db");
+    const user = await db
+      .collection("users")
+      .updateOne({ _id: new mongodb.ObjectId(userId) }, { $set: { age: 22 } });
+    res.json({ message: "user updated", user });
+  } catch (error) {
+    console.log(error);
   } finally {
     client.close();
   }
 });
-app.all("*", (req, res) => {
-  res.statusCode = 404;
-  res.send("NOT FOUND");
+app.delete("/user/:userId/delete", async (req, res) => {
+  const { userId } = req.params;
+  const client = await mongoClient.connect(dburl);
+  try {
+    const db = await client.db("sample_db");
+    const user = await db
+      .collection("users")
+      .deleteOne({ _id: new mongodb.ObjectId(userId) });
+    res.json({ message: "user was deleted from databse", user });
+  } catch (error) {
+    console.log(error);
+  } finally {
+    client.close();
+  }
 });
+app.listen(3000, () => console.log("listening on 3000"));
