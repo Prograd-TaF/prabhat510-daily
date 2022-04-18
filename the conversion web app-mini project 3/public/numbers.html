@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="./style.css" />
+  <body>
+    <div class="container">
+      <p>Numbers</p>
+      <div class="part1">
+        <label for="unit">From:</label>
+        <br /><br />
+        <select name="unit-from" id="from-number">
+          <option value="decimal">decimal</option>
+          <option value="binary">binary</option>
+          <option value="hexadecimal">hexadecimal</option>
+        </select>
+      </div>
+      <br />
+      <div class="part2">
+        <label for="unit">To:</label>
+        <br /><br />
+        <select name="unit-to" id="to-number">
+          <option value="decimal">decimal</option>
+          <option value="binary">binary</option>
+          <option value="hexadecimal">hexadecimal</option>
+        </select>
+      </div>
+      <br />
+      <input type="text" id="number-input" />
+      <button type="button" onclick="convertNumber()" id="button">
+        convert
+      </button>
+      <p class="res" id="numbers-res"></p>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

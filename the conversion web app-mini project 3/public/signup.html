@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: inline-block;
+      border: none;
+      background: #f1f1f1;
+    }
+
+    input[type="text"]:focus,
+    input[type="password"]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+
+    hr {
+      border: 1px solid #f1f1f1;
+      margin-bottom: 25px;
+    }
+    h1 {
+      text-align: center;
+    }
+    button {
+      background-color: #04aa6d;
+      color: white;
+      padding: 14px 20px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.9;
+    }
+
+    button:hover {
+      opacity: 1;
+    }
+    .form {
+      height: 630px;
+      margin: auto;
+      width: 350px;
+    }
+    .button {
+      float: left;
+      width: 50%;
+    }
+
+    .container {
+      padding: 16px;
+    }
+    .red {
+      background-color: purple;
+    }
+    .clearfix::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    @media screen and (max-width: 300px) {
+      .cancelbtn,
+      .signupbtn {
+        width: 100%;
+      }
+    }
+  </style>
+  <body>
+    <div class="form" style="border: 1px solid #ccc">
+      <div class="container">
+        <h1>Sign Up</h1>
+
+        <label for="Name"><b>Name</b></label>
+        <input type="text" placeholder="Enter Name" id="name" required />
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Name" id="signup-user" required />
+        <label for="email"><b>Email</b></label>
+        <input
+          type="text"
+          placeholder="Enter Email"
+          id="signup-user-email"
+          required
+        />
+
+        <label for="psw"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          id="signup-password"
+          required
+        />
+
+        <label for="psw-repeat"><b>Confirm Password</b></label>
+        <input
+          type="password"
+          placeholder="Repeat Password"
+          id="confirm-password"
+          required
+        />
+        <button type="button" class="button" onclick="createAccount()">
+          Sign Up
+        </button>
+        <button type="button" class="button red" onclick="redirectToLogin()">
+          login
+        </button>
+      </div>
+      <script src="./script.js"></script>
+    </div>
+  </body>
+</html>
