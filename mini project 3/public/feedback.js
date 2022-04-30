@@ -7,7 +7,7 @@ if (window.location.href !== "http://localhost:5500/feedback") {
   setTimeout(() => {
     console.log("display popup");
     showFeedbackPopUp();
-  }, 3000);
+  }, 5000);
 } else {
   showFeedbackPopUp();
 }
@@ -91,6 +91,7 @@ getElementById("form3-submit").addEventListener("click", (event) => {
     });
   }
 });
+
 function getElementById(id) {
   return document.getElementById(id);
 }

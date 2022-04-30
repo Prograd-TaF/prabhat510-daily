@@ -79,6 +79,12 @@
       background: #367e7c;
       text-decoration: none !important;
     }
+    .nav-content {
+      margin-left: 600px;
+    }
+    .align-right {
+      margin-left: 250px;
+    }
     #popUpContainer {
       position: absolute;
       z-index: 40;
@@ -89,7 +95,56 @@
     }
   </style>
   <body>
-    <div class="header">Welcome to RapidConversion</div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <div class="nav-content">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#" style="color: whitesmoke"
+            >RapidConversion</a
+          >
+          <div class="align-right">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item active">
+                <a
+                  class="nav-link nav-feature"
+                  href="#"
+                  style="color: whitesmoke"
+                  onclick="handleFeedback()"
+                  >submit feedback <span class="sr-only"></span
+                ></a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link nav-feature"
+                  href="#"
+                  style="color: whitesmoke"
+                  onclick="displayUserFeedbacks()"
+                  >show feedbacks</a
+                >
+              </li>
+              <button
+                type="button"
+                class="btn btn-sm btn-danger mt-1"
+                style="width: 80px; height: 30px"
+                onclick="logOut()"
+              >
+                Log Out
+              </button>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
 
     <div id="popUpContainer" hidden>
       <div class="card" id="form1" style="width: 25rem; height: 20rem">
